@@ -1,0 +1,25 @@
+---
+title: Review of Python Data Structures
+author: Kevin Stachelek
+date: '2018-10-10'
+slug: review-of-python-data-structures
+categories: []
+tags: []
+---
+
+
+Come and join CodeOn! and improve your coding for the new era
+
+Our second meeting will be: 
+
+October 10th 5:30-6:30pm in NTT (Norman Topping Tower) 4444
+
+Topic: Review of Python Data Structures
+
+Bring your laptop and programming questions!
+
+Can't make it, but want to stay in touch?
+
+Contact us: keckcodeon@gmail.com
+
+

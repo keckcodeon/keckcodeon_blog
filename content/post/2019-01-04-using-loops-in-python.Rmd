@@ -1,0 +1,24 @@
+---
+title: Using Loops In Python
+author: Kevin Stachelek
+date: '2018-09-19'
+slug: using-loops-in-python
+categories: []
+tags: []
+---
+
+
+Come and join CodeOn! and improve your coding for the new era
+
+Our second meeting will be: 
+
+September 19th 5:30-6:30pm in NTT (Norman Topping Tower) 4444
+
+Topic: Using Loops in Python
+
+Bring your laptop and programming questions!
+
+Can't make it, but want to stay in touch?
+
+Contact us: keckcodeon@gmail.com
+
