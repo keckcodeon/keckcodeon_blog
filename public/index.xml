@@ -81,5 +81,18 @@ You can find session materials at our google drive</description>
       <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
     </item>
     
+    <item>
+      <title>Session Materials</title>
+      <link>/session_materials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/session_materials/</guid>
+      <description> Spring 2019
+ Fall 2018
+ Spring 2018
+ Fall 2017
+  </description>
+    </item>
+    
   </channel>
 </rss>

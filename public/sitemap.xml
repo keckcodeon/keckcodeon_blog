@@ -44,6 +44,10 @@
   </url>
   
   <url>
+    <loc>/session_materials/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <priority>0</priority>
   </url>
