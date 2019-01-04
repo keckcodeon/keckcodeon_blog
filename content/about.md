@@ -3,4 +3,11 @@ title: "About"
 date: "2016-05-05T21:48:51-07:00"
 ---
 
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium).
+Need to cross the computational bridge for projects?
+Need to know coding for a job position?
+UPC computer classes too far away?
+
+We are a group of students with experience in data science and coding for life science.
+
+We have biweekly lectures and hands on sessions designed for you!
+Come and join CodeOn! to improve your coding
