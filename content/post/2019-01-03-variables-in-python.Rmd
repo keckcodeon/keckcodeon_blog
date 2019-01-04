@@ -1,10 +1,11 @@
 ---
-title: variables in python
-author: Kevin Stachelek
+title: "variables in python"
+author: "Kevin Stachelek"
 date: '2018-09-12'
+output: pdf_document
 slug: variables-in-python
-categories: []
 tags: []
+categories: []
 ---
 
 Come and join CodeOn! and improve your coding for the new era
@@ -20,3 +21,5 @@ Bring your laptop and programming questions!
 Can't make it, but want to stay in touch?
 
 Contact us: keckcodeon@gmail.com
+
+You can find session materials at our [google drive](https://drive.google.com/drive/folders/1J_vPhkOEe2mOa1S6z7So5eTElvNhVa4f?usp=sharing)
