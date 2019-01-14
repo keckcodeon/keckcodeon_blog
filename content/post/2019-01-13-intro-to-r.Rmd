@@ -2,7 +2,7 @@
 title: "Introduction to the R Programming Language"
 author: Kevin Stachelek
 date: '2019-01-13'
-slug: pandas-for-data-analysis
+slug: intro-to-r
 categories: []
 tags: []
 
