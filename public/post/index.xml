@@ -6,10 +6,20 @@
     <description>Recent content in Posts on CodeOn! at Keck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to the R Programming Language</title>
+      <link>/2019/01/14/intro-to-r/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/14/intro-to-r/</guid>
+      <description>Are you a biologist with more data than you know what to do with? Do you wish you were more familiar with common programming methods for the life sciences?
+Then come and join CodeOn! We’re a community of data science learners committed to developing computational skills among Keck students.  We’re starting off the Spring 2019 semester with an introduction to the R programming language. We’ll be hosting gatherings every other week.</description>
+    </item>
     
     <item>
       <title>Review of Python Data Structures</title>

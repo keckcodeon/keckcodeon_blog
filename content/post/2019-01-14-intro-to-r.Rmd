@@ -1,0 +1,31 @@
+---
+title: "Introduction to the R Programming Language"
+author: Kevin Stachelek
+date: '2019-01-14'
+slug: intro-to-r
+categories: []
+tags: []
+---
+
+
+Are you a biologist with more data than you know what to do with? 
+Do you wish you were more familiar with common programming methods for the life sciences? 
+
+#### Then come and join CodeOn! We're a community of data science learners committed to developing computational skills among Keck students. 
+
+## We're starting off the Spring 2019 semester with an introduction to the R programming language. We'll be hosting gatherings every other week. Details below!
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+> Intro to the R programming language  
+led by Connor Hurd  
+NTT 4444  
+5:30 -6:30  
+Wednesday 1/16 
+
+[CodeOn! Homepage](https://keckcodeon.netlify.com)
+
+```{r, echo = F, fig.align='center'}
+knitr::include_graphics("/images/code_on_wheel.png")
+```
+
