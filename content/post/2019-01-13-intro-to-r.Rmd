@@ -19,4 +19,5 @@ NTT 4444
 5:30 -6:30
 Wednesday 1/16 
 
+![CodeOn! Homepage](https://keckcodeon.netlify.com)
 [Code On Wheel](images/code_on_wheel.png)
