@@ -10,31 +10,6 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Introduction to the R Programming Language</title>
-      <link>/2019/01/13/intro-to-r/</link>
-      <pubDate>Sun, 13 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/01/13/intro-to-r/</guid>
-      <description>
-        
-
-
-&lt;p&gt;Are you a biologist with more data than you know what to do with? Do you wish you were more familiar with common programming methods for the life sciences? Then come and join CodeOn! We’re a community of data science learners committed to developing computational skills among Keck students.&lt;/p&gt;
-&lt;p&gt;We’re starting off the Spring 2019 semester with an introduction to the R programming language. We’ll be hosting gatherings every other week. Details below!&lt;/p&gt;
-&lt;p&gt;Can’t make it and want to get added to the mailing list for future sessions? email &lt;a href=&#34;mailto:keckcodeon@gmail.com&#34; class=&#34;email&#34;&gt;keckcodeon@gmail.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Intro to the R programming language
-led by Connor Hurd
-NTT 4444
-5:30 -6:30
-Wednesday 1/16&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://keckcodeon.netlify.com&#34; alt=&#34;CodeOn! Homepage&#34; /&gt;
-&lt;a href=&#34;images/code_on_wheel.png&#34;&gt;Code On Wheel&lt;/a&gt;&lt;/p&gt;
-
-        
-      </description>
-    </item>
-    
-    <item>
       <title>Review of Python Data Structures</title>
       <link>/2018/10/10/review-of-python-data-structures/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
@@ -138,6 +113,46 @@ UPC computer classes too far away?&lt;/p&gt;
 
 &lt;p&gt;We have biweekly lectures and hands on sessions designed for you!
 Come and join CodeOn! to improve your coding&lt;/p&gt;
+
+        
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>
+        
+
+
+&lt;hr /&gt;
+&lt;p&gt;title: “Introduction to the R Programming Language”
+author: Kevin Stachelek
+date: ‘2019-01-13’
+slug: pandas-for-data-analysis
+categories: []
+tags: []&lt;/p&gt;
+&lt;p&gt;Are you a biologist with more data than you know what to do with?
+Do you wish you were more familiar with common programming methods for the life sciences?&lt;/p&gt;
+&lt;div id=&#34;then-come-and-join-codeon-were-a-community-of-data-science-learners-committed-to-developing-computational-skills-among-keck-students.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Then come and join CodeOn! We’re a community of data science learners committed to developing computational skills among Keck students.&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;were-starting-off-the-spring-2019-semester-with-an-introduction-to-the-r-programming-language.-well-be-hosting-gatherings-every-other-week.-details-below&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;We’re starting off the Spring 2019 semester with an introduction to the R programming language. We’ll be hosting gatherings every other week. Details below!&lt;/h2&gt;
+&lt;p&gt;Can’t make it and want to get added to the mailing list for future sessions? email &lt;a href=&#34;mailto:keckcodeon@gmail.com&#34; class=&#34;email&#34;&gt;keckcodeon@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Intro to the R programming language&lt;br /&gt;
+led by Connor Hurd&lt;br /&gt;
+NTT 4444&lt;br /&gt;
+5:30 -6:30&lt;br /&gt;
+Wednesday 1/16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://keckcodeon.netlify.com&#34;&gt;CodeOn! Homepage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/code_on_wheel.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
 
         
       </description>
