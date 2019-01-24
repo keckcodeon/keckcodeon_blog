@@ -7,7 +7,7 @@ categories: []
 tags: []
 ---
 
-```{r, echo = F, fig.align='center', out.width="400px", eval = F}
+```{r, echo = F, fig.align='center', out.width="400px"}
 knitr::include_graphics("/images/code_on_header.png")
 ```
 
@@ -29,7 +29,7 @@ Wednesday 1/30/2019
 
 Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
 
-```{r, echo = F, fig.align='center', out.width="400px", eval = F}
+```{r, echo = F, fig.align='center', out.width="400px"}
 knitr::include_graphics("/images/code_on_wheel.png")
 ```
 
