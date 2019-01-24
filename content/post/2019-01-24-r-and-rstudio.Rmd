@@ -7,7 +7,7 @@ categories: []
 tags: []
 ---
 
-```{r, echo = F, fig.align='center', out.width="800px"}
+```{r, echo = F, fig.align='center', out.width="700px"}
 knitr::include_graphics("/images/code_on_header.png")
 ```
 
