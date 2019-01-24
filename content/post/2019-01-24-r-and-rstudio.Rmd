@@ -7,7 +7,7 @@ categories: []
 tags: []
 ---
 
-```{r, echo = F, fig.align='center', out.width="400px"}
+```{r, echo = F, fig.align='center'}
 knitr::include_graphics("/images/code_on_header.png")
 ```
 
@@ -15,21 +15,19 @@ knitr::include_graphics("/images/code_on_header.png")
 
 # Want to learn programming for the life sciences? 
 
-<span style="color:firebrick">
 ## Come join [CodeOn!](https://keckcodeon.netlify.com) 
-</span>
 
 ### We're a community of data science learners sharing skills among Keck students. 
 
 ## We host gatherings every other week. Details below!
 
-<span style="color:firebrick">
+
 > R and Rstudio
 led by Kevin Stachelek  
 NTT 4444  
 5:30 -6:30  
 Wednesday 1/30/2019
-</span>
+
 
 Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
 

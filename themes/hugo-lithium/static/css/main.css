@@ -12,14 +12,12 @@ body {
   -moz-font-feature-settings: "liga" on;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #222;
-}
+h1 {color: #a02c2c;},
+h2 {color: #a02c2c;},
+h3 {color: #a02c2c;},
+h4 {color: #a02c2c;},
+h5 {color: #a02c2c;},
+h6 {color: #a02c2c;}
 
 a {
   outline: none;
