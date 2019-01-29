@@ -22,8 +22,8 @@ knitr::include_graphics("/images/code_on_header.png")
 ## We host gatherings every other week. Details below!
 
 
-> R and Rstudio
-led by Kevin Stachelek  
+> Basic introduction of R using R Studio
+led by Kuo-Chang (Ted) Tseng  
 NTT 4444  
 5:30 -6:30  
 Wednesday 1/30/2019
