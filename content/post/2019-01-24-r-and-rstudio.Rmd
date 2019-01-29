@@ -1,10 +1,10 @@
 ---
-title: "CodeOn! 01/30/2019: R and Rstudio"
-author: Kevin Stachelek
+title: 'CodeOn! 01/30/2019: R and Rstudio'
+author: "Kevin Stachelek"
 date: '2019-01-24'
 slug: r-and-rstudio
-categories: []
 tags: []
+categories: []
 ---
 
 ```{r, echo = F, fig.align='center', out.width="700px"}
