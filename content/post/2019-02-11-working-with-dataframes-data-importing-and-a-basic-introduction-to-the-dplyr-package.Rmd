@@ -1,0 +1,38 @@
+---
+title: dataframes, data importing, and a basic introduction to the dplyr package
+author: Kevin Stachelek
+date: '2019-02-11'
+slug: dataframes-data-importing-and-dplyr
+categories: []
+tags: []
+---
+
+```{r, echo = F, fig.align='center', out.width="700px"}
+knitr::include_graphics("/images/code_on_header.png")
+```
+
+# Are you a biologist with __BIG__ data? 
+
+# Want to learn programming for the life sciences? 
+
+## Come join [CodeOn!](https://keckcodeon.netlify.com) 
+
+### We're a community of data science learners sharing skills among Keck students. 
+
+## We host gatherings every other week. Details below!
+
+
+> Working with dataframes, data importing, and a basic introduction to the dplyr package
+led by Kuo-Chang (Ted) Tseng  
+NTT 4444  
+5:30 -6:30  
+Wednesday 02/13/2019
+
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+```{r, echo = F, fig.align='center', out.width="400px"}
+knitr::include_graphics("/images/code_on_wheel.png")
+```
+
+
