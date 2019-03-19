@@ -1,0 +1,36 @@
+---
+title: 'CodeOn! 2019-03-20: plotting and visualization with ggplot2'
+author: Kevin Stachelek
+date: '2019-03-18'
+slug: plotting-and-visualization-with-ggplot2
+categories: []
+tags: []
+---
+
+# Are you a biologist with __BIG__ data? 
+
+# Want to learn programming for the life sciences? 
+
+## Come join [CodeOn!](https://keckcodeon.netlify.com) 
+
+### We're a community of data science learners sharing skills among Keck students. 
+
+## We host gatherings every other week. Details below!
+
+
+> Plotting and Visualization with ggplot2
+led by Kevin Stachelek  
+NTT 4444  
+5:30 -6:30  
+Wednesday 03/20/2019
+
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+```{r, echo = F, fig.align='center', out.width="400px"}
+knitr::include_graphics("/images/code_on_wheel.png")
+```
+
+
+
+
