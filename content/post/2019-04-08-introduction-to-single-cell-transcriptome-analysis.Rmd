@@ -18,7 +18,7 @@ tags: []
 ## We host gatherings every other week. Details below!
 
 
-> Plotting and Visualization with ggplot2
+> Introduction to Single Cell Transcriptome Analysis
 led by Kuo-chang (Ted) Tseng
 NTT 4444  
 5:30 -6:30  
