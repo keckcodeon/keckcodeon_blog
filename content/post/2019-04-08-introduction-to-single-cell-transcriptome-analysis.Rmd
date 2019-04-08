@@ -19,10 +19,10 @@ tags: []
 
 
 > Plotting and Visualization with ggplot2
-led by Kevin Stachelek  
+led by Kuo-chang (Ted) Tseng
 NTT 4444  
 5:30 -6:30  
-Wednesday 03/20/2019
+Wednesday 04/10/2019
 
 
 Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
