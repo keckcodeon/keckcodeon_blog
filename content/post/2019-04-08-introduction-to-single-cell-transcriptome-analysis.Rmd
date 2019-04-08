@@ -18,8 +18,8 @@ tags: []
 ## We host gatherings every other week. Details below!
 
 
-> Introduction to Single Cell Transcriptome Analysis
-led by Kuo-chang (Ted) Tseng
+> Introduction to Single Cell Transcriptome Analysis  
+led by Kuo-chang (Ted) Tseng  
 NTT 4444  
 5:30 -6:30  
 Wednesday 04/10/2019
