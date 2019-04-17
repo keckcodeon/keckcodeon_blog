@@ -24,7 +24,7 @@ NTT 4444
 5:30 -6:30  
 Wednesday 03/06/2019
 
-You can view slides for [dplyr](/slides/intro_tidyverse2/R1/intro_to_dplyr.html) and ggplot2 [here](/slides/intro_tidyverse2/R1/intro_to_ggplot2.html)
+You can view slides for [dplyr](/slides/intro_tidyverse2/R1/intro_to_dplyr.html){target="_blank"} and [ggplot2](/slides/intro_tidyverse2/R1/intro_to_ggplot2.html){target="_blank"}
 
 Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
 
