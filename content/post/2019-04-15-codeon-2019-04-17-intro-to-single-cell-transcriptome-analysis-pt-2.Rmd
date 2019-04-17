@@ -23,6 +23,8 @@ NTT 4444
 5:30 -6:30  
 Wednesday 04/17/2019
 
+You can view slides [here](/slides/intro_scrnaseq_pt_2/scRNAseq_intro.html)
+
 Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
 
 ```{r, echo = F, fig.align='center', out.width="400px"}
