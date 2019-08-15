@@ -11,7 +11,7 @@ categories: []
 Are you a biologist with more data than you know what to do with? 
 Do you wish you were more familiar with common programming methods for the life sciences? 
 
-#### Then come and join [CodeOn!](https://keckcodeon.netlify.com) We're a community of data science learners committed to developing computational skills among Keck students. 
+#### Then come and join [CodeOn!](https://keckcodeon.github.io) We're a community of data science learners committed to developing computational skills among Keck students. 
 
 ## We're starting off the Spring 2019 semester with an introduction to the R programming language. We'll be hosting gatherings every other week. Details below!
 

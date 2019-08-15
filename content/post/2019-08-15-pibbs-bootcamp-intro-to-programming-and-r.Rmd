@@ -1,0 +1,36 @@
+---
+title: 'PIBBS Bootcamp: Intro to Programming and R'
+author: ~
+date: '2019-08-15'
+slug: pibbs-bootcamp-intro-to-programming-and-r
+categories: []
+tags: []
+---
+
+# Are you a biologist with __BIG__ data? 
+
+# Want to learn programming for the life sciences? 
+
+## Come join [CodeOn!](https://keckcodeon.github.io) 
+
+### We're a community of data science learners sharing skills among Keck students. 
+
+## We host gatherings every other week. Details below!
+
+> Getting Started with Bash and R programming 
+led by Libere Ndacayisaba and Kevin Stachelek  
+MCH 256  
+9:00am-11:00am -6:30  
+Wednesday 2019-08-06
+
+You can view Kevin's Intro to R slides [here](/slides/Kevin_R_for_beginners/R_for_beginners.html)
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+```{r, echo = F, fig.align='center', out.width="400px"}
+knitr::include_graphics("/images/code_on_wheel.png")
+```
+
+
+
+

@@ -17,7 +17,7 @@ knitr::include_graphics("~/keckcodeon/keckcodeon_blog/static/images/code_on_head
 
 # Want to learn programming for the life sciences? 
 
-## Come join [CodeOn!](https://keckcodeon.netlify.com) 
+## Come join [CodeOn!](https://keckcodeon.github.io) 
 
 ### We're a community of data science learners committed to developing computational skills among Keck students. 
 

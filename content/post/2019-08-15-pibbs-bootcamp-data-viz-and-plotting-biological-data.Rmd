@@ -1,0 +1,32 @@
+---
+title: 'PIBBS Bootcamp: Data Viz and Plotting Biological Data'
+author: ~
+date: '2019-08-15'
+slug: pibbs-bootcamp-data-viz-and-plotting-biological-data
+categories: []
+tags: []
+---
+
+# Are you a biologist with __BIG__ data? 
+
+# Want to learn programming for the life sciences? 
+
+## Come join [CodeOn!](https://keckcodeon.netlify.com) 
+
+### We're a community of data science learners sharing skills among Keck students. 
+
+## We host gatherings every other week. Details below!
+
+> PIBBS Bootcamp: Data Viz and Plotting Biological Data
+led by Ted Tseng and Duc Nguyen  
+MCH 256
+9:00am-11:00am  
+Monday 2019-08-12
+
+You can view Duc's slides [here](/slides/JD-high-dimensional-data-analysis-RNA-seq/codeon-bootcamp-2019-08-12-JD.html)
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+```{r, echo = F, fig.align='center', out.width="400px"}
+knitr::include_graphics("/images/code_on_wheel.png")
+```

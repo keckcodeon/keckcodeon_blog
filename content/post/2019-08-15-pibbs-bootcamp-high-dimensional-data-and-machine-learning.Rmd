@@ -1,0 +1,33 @@
+---
+title: 'PIBBS Bootcamp: High Dimensional Data and Machine Learning'
+author: ~
+date: '2019-08-15'
+slug: pibbs-bootcamp-high-dimensional-data-and-machine-learning
+categories: []
+tags: []
+---
+
+# Are you a biologist with __BIG__ data? 
+
+# Want to learn programming for the life sciences? 
+
+## Come join [CodeOn!](https://keckcodeon.githu.io) 
+
+### We're a community of data science learners sharing skills among Keck students. 
+
+## We host gatherings every other week. Details below!
+
+> PIBBS Bootcamp: High Dimensional Data and Machine Learning
+led by Kevin Stachelek and Libere Ndacayisaba  
+MCH 256
+1:00pm-3:00pm  
+Thursday 2019-08-15
+
+You can view Kevin's slides [here](/slides/intro_scrnaseq_pt_2/scRNAseq_intro.html)
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+```{r, echo = F, fig.align='center', out.width="400px"}
+knitr::include_graphics("/images/code_on_wheel.png")
+```
+

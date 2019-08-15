@@ -1,0 +1,32 @@
+---
+title: 'PIBBS Bootcamp: Data Wrangling with the Tidyverse and Genomics'
+author: ~
+date: '2019-08-15'
+slug: pibbs-bootcamp-data-wrangling-with-the-tidyverse-and-genomics
+categories: []
+tags: []
+---
+
+# Are you a biologist with __BIG__ data? 
+
+# Want to learn programming for the life sciences? 
+
+## Come join [CodeOn!](https://keckcodeon.github.io) 
+
+### We're a community of data science learners sharing skills among Keck students. 
+
+## We host gatherings every other week. Details below!
+
+> Data Wrangling with the Tidyverse and Genomics
+led by Ted Tseng and Kevin Stachelek  
+MCH 256
+9:00am-11:00am  
+Wednesday 2019-08-08
+
+You can view Kevin's slides [here](/slides/Kevin_genomics_case_study/Genomics_Data_Manipulation.html)
+
+Can't make it and want to get added to the mailing list for future sessions? email keckcodeon@gmail.com
+
+```{r, echo = F, fig.align='center', out.width="400px"}
+knitr::include_graphics("/images/code_on_wheel.png")
+```

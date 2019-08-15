@@ -1,4 +1,4 @@
-baseurl = "https://keckcodeon.netlify.com/"
+baseurl = "https://keckcodeon.github.io/"
 languageCode = "en-us"
 title = "CodeOn! at Keck"
 theme = "hugo-lithium"
