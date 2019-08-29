@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on CodeOn! at Keck</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on CodeOn! at Keck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PIBBS Bootcamp: Data Viz and Plotting Biological Data</title>
+      <link>/2019/08/15/pibbs-bootcamp-data-viz-and-plotting-biological-data/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/15/pibbs-bootcamp-data-viz-and-plotting-biological-data/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  PIBBS Bootcamp: Data Viz and Plotting Biological Data led by Ted Tseng and Duc Nguyen
+MCH 256 9:00am-11:00am
+Monday 2019-08-12
+ You can view Duc’s slides here</description>
+    </item>
+    
+    <item>
+      <title>PIBBS Bootcamp: Data Wrangling with the Tidyverse and Genomics</title>
+      <link>/2019/08/15/pibbs-bootcamp-data-wrangling-with-the-tidyverse-and-genomics/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/15/pibbs-bootcamp-data-wrangling-with-the-tidyverse-and-genomics/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Data Wrangling with the Tidyverse and Genomics led by Ted Tseng and Kevin Stachelek
+MCH 256 9:00am-11:00am
+Wednesday 2019-08-08
+ You can view Kevin’s slides here
+Can’t make it and want to get added to the mailing list for future sessions?</description>
+    </item>
+    
+    <item>
+      <title>PIBBS Bootcamp: High Dimensional Data and Machine Learning</title>
+      <link>/2019/08/15/pibbs-bootcamp-high-dimensional-data-and-machine-learning/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/15/pibbs-bootcamp-high-dimensional-data-and-machine-learning/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  PIBBS Bootcamp: High Dimensional Data and Machine Learning led by Kevin Stachelek and Libere Ndacayisaba
+MCH 256 1:00pm-3:00pm
+Thursday 2019-08-15
+ You can view Kevin’s slides here</description>
+    </item>
+    
+    <item>
+      <title>PIBBS Bootcamp: Intro to Programming and R</title>
+      <link>/2019/08/15/pibbs-bootcamp-intro-to-programming-and-r/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/15/pibbs-bootcamp-intro-to-programming-and-r/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Getting Started with Bash and R programming led by Libere Ndacayisaba and Kevin Stachelek
+MCH 256
+9:00am-11:00am -6:30
+Wednesday 2019-08-06
+ You can view Kevin’s Intro to R slides here</description>
+    </item>
+    
+    <item>
+      <title>CodeOn! 2019-04-17: Intro to Single Cell Transcriptome Analysis pt. 2</title>
+      <link>/2019/04/15/intro-to-single-cell-pt-2/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/15/intro-to-single-cell-pt-2/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Intro to Single Cell Transcriptome Analysis pt. 2
+led by Kevin Stachelek
+NTT 4444
+5:30 -6:30
+Wednesday 04/17/2019
+ You can view slides here
+Can’t make it and want to get added to the mailing list for future sessions?</description>
+    </item>
+    
+    <item>
+      <title>CodeOn! 2019-04-10: Introduction to Single Cell Transcriptome Analysis</title>
+      <link>/2019/04/08/introduction-to-single-cell-transcriptome-analysis/</link>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/08/introduction-to-single-cell-transcriptome-analysis/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Introduction to Single Cell Transcriptome Analysis
+led by Kuo-chang (Ted) Tseng
+NTT 4444
+5:30 -6:30
+Wednesday 04/10/2019
+ Can’t make it and want to get added to the mailing list for future sessions?</description>
+    </item>
+    
+    <item>
+      <title>CodeOn! 2019-03-20: plotting and visualization with ggplot2</title>
+      <link>/2019/03/18/plotting-and-visualization-with-ggplot2/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/18/plotting-and-visualization-with-ggplot2/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Plotting and Visualization with ggplot2 led by Kevin Stachelek
+NTT 4444
+5:30 -6:30
+Wednesday 03/20/2019
+ You can view slides here
+Can’t make it and want to get added to the mailing list for future sessions?</description>
+    </item>
+    
+    <item>
+      <title>CodeOn! 2019-03-06: Data wrangling and visualization with dplyr and ggplot2</title>
+      <link>/2019/02/28/codeon-2019-03-06-data-wrangling-and-visualization-with-dplyr-and-ggplot2/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/28/codeon-2019-03-06-data-wrangling-and-visualization-with-dplyr-and-ggplot2/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Data wrangling and visualization with dplyr and ggplot2 led by Kevin Stachelek
+NTT 4444
+5:30 -6:30
+Wednesday 03/06/2019
+ You can view slides for dplyr and ggplot2</description>
+    </item>
+    
+    <item>
+      <title>CodeOn! 02/13/2019: Dataframes, data importing, and intro to the dplyr package</title>
+      <link>/2019/02/11/dataframes-data-importing-and-dplyr/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/11/dataframes-data-importing-and-dplyr/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Working with dataframes, data importing, and a basic introduction to the dplyr package led by Kuo-Chang (Ted) Tseng
+NTT 4444
+5:30 -6:30
+Wednesday 02/13/2019
+ Can’t make it and want to get added to the mailing list for future sessions?</description>
+    </item>
+    
+    <item>
+      <title>CodeOn! 01/30/2019: R and Rstudio</title>
+      <link>/2019/01/24/r-and-rstudio/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/24/r-and-rstudio/</guid>
+      <description>Are you a biologist with BIG data?  Want to learn programming for the life sciences? Come join CodeOn! We’re a community of data science learners sharing skills among Keck students.   We host gatherings every other week. Details below!  Basic introduction of R using R Studio led by Kuo-Chang (Ted) Tseng
+NTT 4444
+5:30 -6:30
+Wednesday 1/30/2019
+ Can’t make it and want to get added to the mailing list for future sessions?</description>
+    </item>
+    
+    <item>
+      <title>Introduction to the R Programming Language</title>
+      <link>/2019/01/14/intro-to-r/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/14/intro-to-r/</guid>
+      <description>Are you a biologist with more data than you know what to do with? Do you wish you were more familiar with common programming methods for the life sciences?
+Then come and join CodeOn! We’re a community of data science learners committed to developing computational skills among Keck students.  We’re starting off the Spring 2019 semester with an introduction to the R programming language. We’ll be hosting gatherings every other week.</description>
+    </item>
+    
+    <item>
+      <title>Review of Python Data Structures</title>
+      <link>/2018/10/10/review-of-python-data-structures/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/10/review-of-python-data-structures/</guid>
+      <description>Come and join CodeOn! and improve your coding for the new era
+Our second meeting will be:
+October 10th 5:30-6:30pm in NTT (Norman Topping Tower) 4444
+Topic: Review of Python Data Structures
+Bring your laptop and programming questions!
+Can’t make it, but want to stay in touch?
+Contact us: keckcodeon@gmail.com</description>
+    </item>
+    
+    <item>
+      <title>Pandas for Data Analysis</title>
+      <link>/2018/10/03/pandas-for-data-analysis/</link>
+      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/03/pandas-for-data-analysis/</guid>
+      <description>Come and join CodeOn! and improve your coding for the new era
+Our second meeting will be:
+October 3rd 5:30-6:30pm in NTT (Norman Topping Tower) 4444
+Topic: Pandas for Data Analysis
+Bring your laptop and programming questions!
+Can’t make it, but want to stay in touch?
+Contact us: keckcodeon@gmail.com</description>
+    </item>
+    
+    <item>
+      <title>Using Loops In Python</title>
+      <link>/2018/09/19/using-loops-in-python/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/19/using-loops-in-python/</guid>
+      <description>Come and join CodeOn! and improve your coding for the new era
+Our second meeting will be:
+September 19th 5:30-6:30pm in NTT (Norman Topping Tower) 4444
+Topic: Using Loops in Python
+Bring your laptop and programming questions!
+Can’t make it, but want to stay in touch?
+Contact us: keckcodeon@gmail.com</description>
+    </item>
+    
+    <item>
+      <title>variables in python</title>
+      <link>/2018/09/12/variables-in-python/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/12/variables-in-python/</guid>
+      <description>Come and join CodeOn! and improve your coding for the new era
+Our second meeting will be:
+September 12th 5:30-6:30pm in NTT (Norman Topping Tower) 4444
+Topic: Types of Variables in Python and Functions for Interacting With Them
+Bring your laptop and programming questions!
+Can’t make it, but want to stay in touch?
+Contact us: keckcodeon@gmail.com
+You can find session materials at our google drive</description>
+    </item>
+    
+  </channel>
+</rss>

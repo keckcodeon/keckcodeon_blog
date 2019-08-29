@@ -550,6 +550,143 @@ Come and join CodeOn! to improve your coding&lt;/p&gt;
     </item>
     
     <item>
+      <title>People</title>
+      <link>/people/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/people/</guid>
+      <description>
+        &lt;style&gt;
+.image-wrapper {
+  box-sizing:border-box;
+  float: left;
+  margin-bottom:5px;
+  width: 50%;
+}
+
+.image-wrapper:nth-child(even)
+{
+  padding-left:5px;
+}
+
+.image-wrapper:nth-child(odd)
+{
+  padding-right:5px;
+}
+
+.image-wrapper &gt; img {
+  width: 100%;
+}
+
+.image-wrapper &gt; span {
+  display: inline-block;
+  width: 100%;
+}  
+&lt;/style&gt;
+
+
+&lt;div id=&#34;libere-ndacayisaba&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Libere Ndacayisaba&lt;/h3&gt;
+&lt;h4&gt;President&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/lndacayisaba.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;connor-hurd&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Connor Hurd&lt;/h3&gt;
+&lt;h4&gt;Vice President&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/churd.png&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;silvia-cervantes-cortes&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Silvia Cervantes Cortes&lt;/h3&gt;
+&lt;h4&gt;Senior Advisor&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/scervantes.png&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;jon-duc-nguyen&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Jon Duc Nguyen&lt;/h3&gt;
+&lt;h4&gt;Lecturer&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/dnguyen.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ted-kuo-chang-tseng&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Ted Kuo-Chang Tseng&lt;/h3&gt;
+&lt;h4&gt;Lecturer&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/ktseng.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;michelle-shu-ting-hung&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Michelle Shu-Ting Hung&lt;/h3&gt;
+&lt;h4&gt;Secretary&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/shung.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;satish-kumar-ghanesan&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Satish Kumar Ghanesan&lt;/h3&gt;
+&lt;h4&gt;Treasurer&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/sghanesan.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;veronica-ortiz&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Veronica Ortiz&lt;/h3&gt;
+&lt;h4&gt;Public Relations&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/vortiz.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;kevin-stachelek&#34; class=&#34;image-wrapper&#34;&gt;
+&lt;h3&gt;Kevin Stachelek&lt;/h3&gt;
+&lt;h4&gt;Lecturer&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/kstachelek.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>People</title>
+      <link>/people2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/people2/</guid>
+      <description>
+        
+
+
+&lt;div id=&#34;libere-ndacayisaba&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Libere Ndacayisaba&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/lndacayisaba.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;connor-hurd&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Connor Hurd&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/churd.png&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;silvia-cervantes-cortes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Silvia Cervantes Cortes&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/scervantes.png&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;jon-duc-nguyen&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Jon Duc Nguyen&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/dnguyen.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ted-kuo-chang-tseng&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ted Kuo-Chang Tseng&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/ktseng.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;michelle-shu-ting-hung&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Michelle Shu-Ting Hung&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/shung.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;satish-kumar-ghanesan&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Satish Kumar Ghanesan&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/sghanesan.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;veronica-ortiz&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Veronica Ortiz&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/vortiz.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;kevin-stachelek&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Kevin Stachelek&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/images/eboard_pics/kstachelek.jpg&#34; width=&#34;50%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Session Materials</title>
       <link>/session_materials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -557,6 +694,8 @@ Come and join CodeOn! to improve your coding&lt;/p&gt;
       <guid>/session_materials/</guid>
       <description>
         &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=1WlMEiDHNArTJQTObxxTEiMY7g5M9Caxd&#34;&gt;Summer 2019- PIBBS Bootcamp&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1GDdAGOLjfhXdhlcxhLw64CM5CkitSIfN?usp=sharing&#34;&gt;Spring 2019&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=1J_vPhkOEe2mOa1S6z7So5eTElvNhVa4f&#34;&gt;Fall 2018&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;

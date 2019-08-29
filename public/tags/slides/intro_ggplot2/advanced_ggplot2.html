@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>More plotting with ggplot2</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Kevin Stachelek" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# More plotting with ggplot2
+### Kevin Stachelek
+### 2019/03/18 (updated: 2019-03-19)
+
+---
+
+
+
+
+## Install required packages
+
+
+```r
+# Load the ggplot2 package
+install.packages("ggplot2")
+install.packages("magrittr") # important so that we can use %&gt;%!
+install.packages("gapminder")
+install.packages("dplyr")
+```
+
+## Load required packages
+
+
+```r
+# Load the ggplot2 package
+library(ggplot2)
+library(magrittr) # important so that we can use %&gt;%!
+library(gapminder)
+library(dplyr)
+```
+
+---
+
+### Explore the mtcars data frame with `head()`
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; mpg &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; cyl &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; disp &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; hp &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; drat &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; wt &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; qsec &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; vs &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; am &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; gear &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; carb &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; fcyl &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.620 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16.46 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.875 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Datsun 710 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.85 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.320 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.61 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hornet 4 Drive &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 258 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.08 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.215 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19.44 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hornet Sportabout &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 360 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Valiant &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 225 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.76 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.460 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Explore the mtcars data frame with `str()`
+
+
+```r
+str(mtcars)
+```
+
+```
+## 'data.frame':	32 obs. of  12 variables:
+##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : Factor w/ 3 levels "4","6","8": 2 2 1 2 3 2 3 1 1 2 ...
+##  $ disp: num  160 160 108 258 360 ...
+##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+##  $ qsec: num  16.5 17 18.6 19.4 17 ...
+##  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+##  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+##  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+##  $ fcyl: Factor w/ 3 levels "4","6","8": 2 2 1 2 3 2 3 1 1 2 ...
+```
+
+---
+
+### Build a simple plot
+
+
+```r
+ggplot(mtcars, aes(x = cyl, y = mpg)) +
+  geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+
+### Axes aesthetics
+
+
+```r
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+---
+
+### Color aesthetics
+
+
+```r
+ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
+  geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+
+### Size aesthetics
+
+
+```r
+ggplot(mtcars, aes(x = wt, y = mpg, size = disp)) +
+  geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+### One common error to avoid
+
+
+```r
+ggplot(mtcars, aes(x = wt, y = mpg, shape = disp)) +
+  geom_point()
+```
+
+--
+
+```r
+table(mtcars$disp)
+```
+
+```
+## 
+##  71.1  75.7  78.7    79  95.1   108 120.1 120.3   121 140.8   145 146.7 
+##     1     1     1     1     1     1     1     1     1     1     1     1 
+##   160 167.6   225   258 275.8   301   304   318   350   351   360   400 
+##     2     2     1     1     3     1     1     1     1     1     2     1 
+##   440   460   472 
+##     1     1     1
+```
+
+--
+
+The _types_ of variables (i.e. columns) are important
+---
+
+### Let's look at another dataset
+
+
+```r
+# Explore the diamonds data frame with str()
+str(diamonds)
+```
+
+```
+## Classes 'tbl_df', 'tbl' and 'data.frame':	53940 obs. of  10 variables:
+##  $ carat  : num  0.23 0.21 0.23 0.29 0.31 0.24 0.24 0.26 0.22 0.23 ...
+##  $ cut    : Ord.factor w/ 5 levels "Fair"&lt;"Good"&lt;..: 5 4 2 4 2 3 3 3 1 3 ...
+##  $ color  : Ord.factor w/ 7 levels "D"&lt;"E"&lt;"F"&lt;"G"&lt;..: 2 2 2 6 7 7 6 5 2 5 ...
+##  $ clarity: Ord.factor w/ 8 levels "I1"&lt;"SI2"&lt;"SI1"&lt;..: 2 3 5 4 2 6 7 3 4 5 ...
+##  $ depth  : num  61.5 59.8 56.9 62.4 63.3 62.8 62.3 61.9 65.1 59.4 ...
+##  $ table  : num  55 61 65 58 58 57 57 55 61 61 ...
+##  $ price  : int  326 326 327 334 335 336 336 337 337 338 ...
+##  $ x      : num  3.95 3.89 4.05 4.2 4.34 3.94 3.95 4.07 3.87 4 ...
+##  $ y      : num  3.98 3.84 4.07 4.23 4.35 3.96 3.98 4.11 3.78 4.05 ...
+##  $ z      : num  2.43 2.31 2.31 2.63 2.75 2.48 2.47 2.53 2.49 2.39 ...
+```
+
+---
+
+###  We can build up a new plot following the same 'recipe' every time
+
++ add data (diamonds)
+
+--
+
++ specify aesthetics (x axis and y axis inside `aes`)
+
+--
+
++ add a geom object (`geom_point`)
+
+--
+
+
+```r
+# Add geom_point() with +
+ggplot(diamonds, aes(x = carat, y = price))  +
+  geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+---
+
+### We can layer additional `geoms` one after another
+
+
+```r
+# Add geom_point() and geom_smooth() with +
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  geom_smooth()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+
+---
+
+### Let's recreate that plot
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+--
+
+
+```r
+# 1 - The plot you created in the previous exercise
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  geom_smooth()
+```
+
+---
+
+### Plotting only the trend-line
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+
+--
+
+
+```r
+# 2 - Copy the above command but show only the smooth line
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_smooth()
+```
+
+---
+
+### Plotting separate lines for each diamond clarity value
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+
+--
+
+
+```r
+# 3 - Copy the above command and assign the correct value to col in aes()
+ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
+  geom_smooth()
+```
+
+---
+
+### Color points by clarity
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+
+--
+
+
+```r
+# 4 - Keep the color settings from previous command. Plot only the points with argument alpha.
+ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
+  geom_point(alpha = 0.4)
+```
+
+---
+
+### plots can be created in two different steps using the `+` symbol
+
+
+```r
+# Create the object containing the data and aes layers: dia_plot
+dia_plot &lt;- ggplot(diamonds, aes(x = carat, y = price))
+
+# Add a geom layer with + and geom_point()
+dia_plot + geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+---
+
+### aesthetics can be 'scoped' to a specific `geom` object
+
+
+```r
+# Add the same geom layer, but with aes() inside
+dia_plot + geom_point(aes(color = clarity))
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+
+---
+
+### Basic scatter plot
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+
+--
+
+
+```r
+# 2 - Expand dia_plot by adding geom_point() with alpha set to 0.2
+dia_plot &lt;- dia_plot + geom_point(alpha = 0.2)
+print(dia_plot)
+```
+
+---
+
+### Plot trendlines per group
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+
+--
+
+```r
+# 3 - Plot dia_plot with additional geom_smooth() with se set to FALSE
+dia_plot + geom_smooth(se = FALSE)
+```
+
+* `se` allows to specify confidence intervals
+
+---
+
+### Plot trendline by clarity
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+--
+
+```r
+# 4 - Copy the command from above and add aes() with the correct mapping to geom_smooth()
+dia_plot + geom_smooth(aes(col = clarity), se = FALSE)
+```
+
+
+---
+
+# _Base R_ plotting
+
+---
+
+#### take a look at built-in `iris` dataset
+
+
+```r
+knitr::kable(head(iris), format = "html")
+```
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### a simple base R plot
+
+
+```r
+plot(iris$Sepal.Length, iris$Sepal.Width)
+points(iris$Petal.Length, iris$Petal.Width, col = "red")
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
+
+---
+
+### Limitations of Base Plotting
+
+1. Plot doesn't get redrawn (this is similar to `matplotlib` in python)
+
+2. Plot is drawn as an image
+
+3. Need to manually add legend
+
+4. No unified framework for plotting
+
+---
+
+### More about Base plots
+
+
+```r
+# Plot the correct variables of mtcars
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+
+---
+
+### More about Base plots
+
+
+```r
+# Change cyl inside mtcars to a factor
+mtcars$fcyl &lt;- as.factor(mtcars$cyl)
+
+# Make the same plot as in the first instruction
+plot(mtcars$wt, mtcars$mpg, col = mtcars$fcyl)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
+
+---
+### More about Base plots
+
+
+```r
+# Use lm() to calculate a linear model and save it as carModel
+carModel &lt;- lm(mpg ~ wt, data = mtcars)
+
+# Basic plot
+mtcars$cyl &lt;- as.factor(mtcars$cyl)
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+
+# Call abline() with carModel as first argument and set lty to 2
+abline(carModel, lty = 2)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
+
+---
+
+### The same plot using `ggplot2`
+
+
+```r
+# Plot 1: add geom_point() to this command to create a scatter plot
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+
+---
+
+### The same plot using `ggplot2`
+
+
+```r
+# Plot 2: include the lines of the linear models, per cyl
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() +
+  geom_smooth(aes(group = 1), method = "lm", se = FALSE, linetype = 2)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+
+---
+
+### The same plot using `ggplot2`
+
+
+```r
+# Plot 3: include a lm for each group in the dataset
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(aes(group = 1), method = "lm", se = FALSE, linetype = 2)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+
+---
+
+# Let's talk about _tidy_ data!
+
+
+
+
+### ggplot2 usually works with _tidy_ data
+
+There are three interrelated rules which make a dataset tidy:
+
+    Each variable must have its own column.
+    Each observation must have its own row.
+    Each value must have its own cell.
+
+
+![tidy-data](tidy-1.png)
+
+---
+
+###  two types of data: 'wide' and 'long'
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Width &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Part &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Petal &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Petal &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Petal &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Petal &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Petal &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Petal &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+* tidy Data is usually 'long'
+
+---
+
+### Tidy data makes code cleaner and therefore more reliable
+
+
+```r
+# Option 1
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point() +
+  geom_point(aes(x = Petal.Length, y = Petal.Width), col = "red")
+
+# Option 2
+ggplot(iris.long, aes(x = Length, y = Width, col = Part)) +
+  geom_point()
+```
+---
+
+### Advantages of ggplot in comparison to base
+
+1. The legend gets taken care of 
+
+2. The axis labels are legible
+
+3. The plot can be __iterated on__
+
+---
+
+### So how we make data tidy?
+
+--
+
+## Use `tidyr` and `dplyr`!
+
+
+```r
+install.packages("nycflights13")
+install.packages("tidyr")
+```
+
+
+```r
+library(tidyr)
+library(nycflights13)
+```
+
+---
+
+### Gather
+
+![gather](gather.png)
+
+---
+
+### Gather
+
+
+```r
+ds &lt;- nycflights13::airports %&gt;% 
+  gather(lat, lon, key = "coordinate", value = "value")
+```
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; faa &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; name &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; alt &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; tz &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; dst &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; tzone &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; coordinate &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; value &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 04G &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lansdowne Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1044 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; lat &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.13047 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Moton Field Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/Chicago &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; lat &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32.46057 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06C &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Schaumburg Regional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 801 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/Chicago &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; lat &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.98934 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06N &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Randall Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 523 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; lat &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.43191 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 09J &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Jekyll Island Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; lat &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31.07447 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 0A9 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Elizabethton Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1593 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; lat &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 36.37122 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+### Spread
+
+![spread](spread.png)
+
+---
+
+### Spread
+
+
+```r
+ds &lt;- ds %&gt;% 
+  tidyr::spread(coordinate, value, c("lat", "lon"))
+```
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; faa &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; name &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; alt &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; tz &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; dst &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; tzone &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; lat &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; lon &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 04G &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lansdowne Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1044 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 41.1304722 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -80.6195833 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Moton Field Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/Chicago &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 32.4605722 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -85.6800278 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06C &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Schaumburg Regional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 801 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/Chicago &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 41.9893408 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -88.1012428 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06N &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Randall Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 523 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 41.431912 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -74.3915611 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 09J &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Jekyll Island Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 31.0744722 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -81.4277778 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 0A9 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Elizabethton Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1593 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 36.3712222 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -82.1734167 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+### Separate
+
+![separate](separate.png)
+
+---
+
+### Separate
+
+
+```r
+ds2 &lt;- nycflights13::airports %&gt;% 
+  tidyr::separate(tzone, into = c("country", "city"), sep = "/")
+```
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; faa &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; name &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; lat &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; lon &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; alt &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; tz &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; dst &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; country &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; city &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 04G &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lansdowne Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.13047 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -80.61958 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1044 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; New_York &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Moton Field Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32.46057 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -85.68003 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Chicago &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06C &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Schaumburg Regional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.98934 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -88.10124 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 801 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Chicago &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06N &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Randall Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.43191 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -74.39156 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 523 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; New_York &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 09J &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Jekyll Island Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31.07447 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -81.42778 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; New_York &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 0A9 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Elizabethton Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 36.37122 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -82.17342 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1593 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; New_York &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+### Unite
+
+![unite](unite.png)
+
+---
+
+### Unite
+
+
+```r
+ds2 &lt;- ds2 %&gt;% 
+  tidyr::unite(country, city, col = "tzone", sep = "/")
+```
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; faa &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; name &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; lat &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; lon &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; alt &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; tz &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; dst &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; tzone &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 04G &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lansdowne Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.13047 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -80.61958 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1044 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Moton Field Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32.46057 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -85.68003 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/Chicago &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06C &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Schaumburg Regional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.98934 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -88.10124 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 801 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/Chicago &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 06N &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Randall Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.43191 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -74.39156 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 523 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 09J &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Jekyll Island Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31.07447 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -81.42778 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 0A9 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Elizabethton Municipal Airport &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 36.37122 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -82.17342 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1593 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; America/New_York &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Modifying aesthetics
+
++ everything in `aes` is an aesthetic mapping (this includes x-axis and y-axis)
+
++ we can modify these `aes` with some specific options 
+
++ let's modify the x-axis aesthetic!
+
+
+
++ standard position
++ `fill` position (proportional)
++ `dodge` position (horizontally stacked position)
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
+
+---
+
+# Other Types of Plots
+
+### Load Data 
+
+
+```r
+gm_2007 &lt;- gapminder %&gt;%
+  filter(year == 2007)
+```
+
+--
+
+###  Load (More) Data
+
+
+```r
+by_year_continent &lt;- gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarize(totalPop = sum(pop),
+            meanLifeExp = mean(lifeExp))
+```
+
+---
+
+# Line plots
+
+change over time
+
+--
+
+
+```r
+ggplot(by_year_continent, aes(x = year, y = totalPop, color = continent, height = 3)) +
+* geom_line() +
+  expand_limits(y = 0)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
+
+---
+
+# Bar plots
+
+comparing over several categories
+
+--
+
+
+
+
+```r
+ggplot(by_continent, aes(x = continent, y = meanLifeExp)) +
+* geom_col()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
+
+---
+
+# histograms
+
+distribution of a single numeric variable
+
+--
+
+
+```r
+ggplot(gm_2007, aes(x = lifeExp)) +
+* geom_histogram()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
+
+---
+
+# It's important to manage the binwidth of a histogram
+
+
+```r
+ggplot(gm_2007, aes(x = lifeExp)) +
+* geom_histogram(binwidth = 5)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-59-1.png)&lt;!-- --&gt;
+
+---
+
+# box plots
+
+distribution of several numeric variables
+
+--
+
+
+```r
+ggplot(gm_2007, aes(x = continent, y = lifeExp)) +
+* geom_boxplot()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+
+---
+
+# Histogram vs Box Plot
+
+.pull-left[
+
+```r
+hist_plot &lt;- ggplot(gm_2007, aes(x = lifeExp)) +
+* geom_histogram()
+
+hist_plot
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-61-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(gm_2007, aes(x = continent, y = lifeExp)) +
+* geom_boxplot()
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-62-1.png)&lt;!-- --&gt;
+]
+
+---
+
+# How to Print to a File
+
+### Three ways:
+
+--
+
+### ggsave
+
+--
+
+### graphicsdevice
+
+--
+
+### manual
+
+---
+
+# ggsave
+
+#### ggsave defaults to the last printed plot
+
+
+```r
+ggsave("test_histogram.pdf")
+```
+
+#### otherwise you can specify a plot object as the second argument
+
+
+```r
+ggsave("test_histogram2.pdf", plot = hist_plot)
+```
+
+---
+
+# graphicsdevice (pdf, png, jpg, etc.)
+
+#### *Warning* The plot needs to be *printed*, not just created within the graphics device
+
+
+```r
+pdf("test_histogram3.pdf")
+hist_plot
+dev.off()
+```
+
+```
+## png 
+##   2
+```
+
+---
+
+# Manually
+
+
+```r
+# can use the rstudio viewer pane
+print(hist_plot)
+```
+
+![](advanced_ggplot2_files/figure-html/unnamed-chunk-66-1.png)&lt;!-- --&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
